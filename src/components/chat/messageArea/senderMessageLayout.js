@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 
 const SenderMessageLayout = ({ message }) => {
     const dispatch=useDispatch();
+    console.log(message)
     return (
         <div className='flex justify-end my-2'>
 
@@ -17,7 +18,7 @@ const SenderMessageLayout = ({ message }) => {
                 }
                 {
                     message.type=="image" &&
-                    <img src={`${message.message}`} className='h-auto w-1/2 cursor-pointer rounded-md' onClick={()=>dispatch(authActions.setImageShow(`${BACKEND_URL}/${message.message}`))}></img>
+                    <img src={`${message.message}`} className='h-auto w-1/2 cursor-pointer rounded-md' onClick={()=>dispatch(authActions.setImageShow(`${message.message}`))}></img>
                     
                     // <img src={`/defaultUser.png`} className='h-auto w-48'></img>
                 }
