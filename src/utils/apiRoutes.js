@@ -1,4 +1,5 @@
 export const BACKEND_URL="https://clabble-backend.onrender.com"
+// export const BACKEND_URL="http://localhost:1212"
 
 const auth=`${BACKEND_URL}/api/auth`
 export const CHECK_USER_ROUTE=`${auth}/checkUser`
