@@ -16,7 +16,7 @@ const OtherMessageLayout = ({message}) => {
                 }
                 {
                     message.type==="image" &&
-                    <img src={`${BACKEND_URL}/${message.message}`} className='h-auto w-1/2 cursor-pointer rounded-md' onClick={()=>dispatch(authActions.setImageShow(`${BACKEND_URL}/${message.message}`))}></img>
+                    <img src={`${message.message}`} className='h-auto w-1/2 cursor-pointer rounded-md' onClick={()=>dispatch(authActions.setImageShow(`${BACKEND_URL}/${message.message}`))}></img>
                 }
             </div>
         
